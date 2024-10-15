@@ -1,0 +1,16 @@
+# first time using the repo
+python -m venv .env-pico
+source .env-pico/bin/activate.fish
+pip install thonny
+python -m thonny
+# then add a pico_wifi_credentials.py to importables/ with a netlist in the following format:
+#netlist = [
+    #{'ssid': 'MyWifiNetwork', 'pw': 'MyPassword'},
+    #{'ssid': 'MyWifiNetwork_5G', 'pw': 'MyOtherPassword'}
+    #]
+
+# on subsequent runs, just activate the virtual environment and run thonny as a module; skip venv
+# creation and thonny installation
+
+# in Thonny, copy all files from the desired project folder to the connected pico-w, along with any
+# modules it imports
